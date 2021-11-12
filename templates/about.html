@@ -22,6 +22,7 @@
 
   background-image:url("https://media.istockphoto.com/photos/fake-news-and-facts-concept-picture-id1212748283?b=1&k=20&m=1212748283&s=170667a&w=0&h=VbPWn2bOvFWHhTEnVadgdlSTh1Bzqrt2_eBDXx9giHE=");
       background-size:100%;
+      background-color: black;
     }
 
     .bg-text {
@@ -58,6 +59,11 @@
 .logo-a{
   font-family: 'Secular One', sans-serif;
 }
+.ab-box{
+  border-style:solid;
+  border-width:5px;
+  border-color:black;
+}
     </style>
     
   </head>
@@ -69,7 +75,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                  <a class="navbar-brand logo-a" href="/index">
+                  <a class="navbar-brand logo-a" href="#">
                     <b>Fake News Detector</b>
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,13 +85,13 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        <a class="nav-link" href="/index">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="/prediction">Prediction</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link active" href="/about">About</a>
                       </li>
                       <!--<li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -116,15 +122,13 @@
 
 
         <div class="row bg-white" style="height:600px;">
-              <div class="img-holder">
-                
-              </div>
-              <div class="bg-text">
-                <h1 class="display-2" style="font-size:50px">Fake News Detector</h1>
+             
+              <div class="bg-text ab-box">
+                <h1 class="display-2" style="font-size:50px">About the App</h1>
                 <!--<h2>Blurred Background</h2>-->
-                <p>Fake news is a growing problem nowadays essentially due to the lack of control over the internet and absence of a governing body to scrutinize the content being uploaded upon the internet. In such a situation, it is important to know which news is real and which one is fake. News are a part and parcel of our lives and we make all our decisions based on some kind of news that makes us aware of the environment of our domain of interest. Say for example, you want to invest in stocks. We rely on the news to predict which stocks are likely to spike up and then invest on the same. When we plan to buy a car, we search for different news regarding the prices of the car and we go for the best deal. We cast our vote based on our perception of the individual or the party which itself is formed due to all the news that we have recieved so far. To get the correct news is hence very important in day to day life. This webapp can help you filter the news and get a general idea of whether the news is fake or real. Although not fully reliable as much as a proper fact-check, this webapp gives fairly accurate results with an acuuracy of around 95%.  </p>
+                <p>The app is basically an ML model that uses natural language processing and then a series of diffrent algorithms to determine whether a news is real or fake. The app is not a fact-checker. Like humans, computer cannot analyze the text. Hence it has to be converted into some numerical values that the computer can interpret and work upon. First, the model performs stemming to omit the unnecessary words and then bring the rest of the words to their basic form. The count vectorizer then converts the text into some numerical values depending upon the frequency of the occuring word. It then applies Passive agressive algorithm over the vectorized text to generate features and then predict the result. The passive agressive algorithm is such that it compares the result to its prediction, if it is same, it becomes passive and does nothing. If it is not same, then it becomes aggressive and does the necessary changes to bring out the correct result. </p>
               </div>
-              <a href="/prediction"><button type="button" class="upload-bt btn btn-primary btn-lg">Upload An Article</button></a>
+              
           </div><!--Row Ends-->
 
 
